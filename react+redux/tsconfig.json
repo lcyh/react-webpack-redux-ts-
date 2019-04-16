@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "allowJs": true,//允许编译javascript文件
+        "allowSyntheticDefaultImports": true,//允许从没有设置默认导出的模块中默认导入, 仅为了类型检查
+        "experimentalDecorators": true,//启用实验性的ES装饰器
+        "esModuleInterop": true,//
+        "moduleResolution": "node", //模块的解析
+        "module": "esnext", //组织代码方式（node,commonjs,amd,es6,es2015） ES6"和"ES2015"可使用在目标输出为"ES5"或更低的情况下
+        "target": "es5", //编译目标平台（es3,es5,e6,es2015）
+        "jsx": "react", //在.tsx文件里支持JSX
+        "lib": ["es2015", "dom"],//添加需要的解析的语法，否则TS会检测出错  https://www.cnblogs.com/zaihuilou/p/9556373.html
+        "removeComments": true, //编译 js 的时候，删除掉注释
+        "sourceMap": true, //把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
+        "noImplicitAny": true,// 为 false 时，如果编译器无法根据变量的使用来判断类型时，将用 any 类型代替。为 true 时，进行强类型检查，会报错
+        "suppressImplicitAnyIndexErrors": true, //禁止 强类型检查报错
+        "baseUrl": "./",
+        "paths": {
+          "@/*": ["src/*"],
+          "pages/*":["src/pages/*"],
+          "components/*":["src/components/*"],
+          "router/*": ["src/router/*"],
+          "utils/*": ["src/utils/*"],
+          "reducers/*": ["src/redux/reducers/*"],
+          "actions/*": ["src/redux/actions/*"],
+          "types/*": ["src/types/*"],
+          "constants/*": ["src/constants/*"],
+          "images/*": ["src/images/*"]
+        }
+      },
+      "include": [
+        "src/**/*"
+    ],
+      "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.spec.ts"
+      ]
+}
+
